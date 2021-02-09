@@ -1,0 +1,40 @@
+SQL quesries according to Task written for MySQL DB.
+
+1. Employee record with highest salary.
+SELECT *
+FROM employee
+ORDER BY salary DESC
+LIMIT 1
+
+2. Highest salary in employee table.
+SELECT max(salary)
+FROM employee
+
+3. 2nd highest salary from employee table.
+SELECT salary
+FROM employee
+ORDER BY salary DESC
+LIMIT 1, 1
+
+4. Range of employees based on id. 
+SELECT emp_id
+FROM employee
+
+OUTPUT:
+Only range of employees IDs displayed.
+
+5. An employee with highest salary and the employee’s department name.
+SELECT emp_id, last_name, department_name AS department, salary
+FROM employee e
+LEFT JOIN department d
+ON e.department_id=d. department_id
+ORDER BY salary DESC
+LIMIT 1
+
+6. Highest salary, employee_name, department_name for EACH department.
+SELECT department_name AS department, first_name, last_name, salary
+FROM employee e
+RIGHT JOIN department d
+ON e.department_id=d.department_id
+GROUP BY d.department_name
+ORDER BY salary DESC
