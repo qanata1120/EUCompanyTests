@@ -49,7 +49,6 @@ public abstract class BaseTest {
         try {
             cookiesAcceptButton = driver.findElement((By.xpath("//*[@id='gdpr_banner_portal']//div[2]//div[1]/button")));
         } catch (NoSuchElementException exception) {
-
         }
         return cookiesAcceptButton;
     }
@@ -62,7 +61,6 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void getMehtodName(Method testMethod) {
-
         System.out.println("Going to run test " + testMethod.getName() + " at " + java.time.LocalTime.now());
     }
 
