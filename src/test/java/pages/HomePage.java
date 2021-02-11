@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
 
+    @FindBy(xpath = "//*[@id='pageMountNode']//div[3]//div[1]/button")
+    private WebElement buttonSignUpOrLogIn;
+
     @FindBy(xpath = "//a[@title='Waterfalls']")
     private WebElement browseWaterfallsTab;
 
@@ -22,6 +25,11 @@ public class HomePage extends BasePage {
     @Override
     protected HomePage createPage() {
         return new HomePage(getDriver());
+    }
+
+    public SigninPage goToLoginPage() {
+        buttonSignUpOrLogIn.click();
+        return new SigninPage(getDriver());
     }
 
     public HomePage browseCavesPage() {
