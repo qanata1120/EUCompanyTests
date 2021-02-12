@@ -1,0 +1,16 @@
+Steps for Configre Jenkins Job.
+
+1. Install Jenkins to run locally on 8080 port. 
+2. Select  new item in Jenkins and give project name. 
+3. Select pipeline style.
+4. Configure.
+5. Go to build trigger option and select build periodically option and schedule time.  
+6. In the pipeline  tab give SCM as git and give the git repository url and credentails and save.
+7. Run the Jenkins job with click build now.
+
+Now the job is scheduled.
+
+
+
+
+
