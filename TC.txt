@@ -1,0 +1,31 @@
+1. Login TC
+Given: User has an account with komoot.com.
+When: User loggs in with valig credentials to komoot.com
+Then: He sees his username in the upper right corner.
+
+2. Browsing Lakes page.
+Given: User is on the home page and not logged in.
+When: User clicks on Lakes tab in Browse Places block
+Then: He redirected to Lakes page.
+
+3. Browsing Caves page.
+Given: User is on the home page and not logged in.
+When: User clicks on Caves tab in Browse Places block
+Then: He redirected to Caves page.
+
+4. Browsing Waterfalls page.
+Given: User is on the home page and not logged in.
+When: User clicks on Waterfalls tab in Browse Places block
+Then: He redirected to Waterfalls page.
+
+5. Browsing Discover page.
+Given: User is on the home page and not logged in.
+When: User clicks on Discover tab in header.
+Then: He redirected to Discover page.
+
+6. Browsing Bike Touring page.
+Given: User is on the home page and not logged in.
+When: User clicks on Discover tab in header.
+Then: He redirected to Discover page.
+When: User clicks on Bike Touring tab in the Discover Routes block.
+Then: He redirected to Cyclicng page.
