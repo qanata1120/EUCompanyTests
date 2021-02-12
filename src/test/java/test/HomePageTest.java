@@ -2,34 +2,35 @@ package test;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.Constants;
 import pages.HomePage;
 
 public class HomePageTest extends BaseTest {
 
-    @Test
+    @Test(groups = "BrowsePlaces")
     public void goToLakesPage() {
 
-        HomePage home = new HomePage(launchDriver())
+        HomePage hm = new HomePage(driver)
                 .browseLakesPage();
 
-        Assert.assertEquals(launchDriver().getCurrentUrl(), "https://www.komoot.com/places/6/lakes");
+        Assert.assertEquals(driver.getCurrentUrl(), Constants.BROWSE_LAKES_PAGE);
     }
 
-    @Test
+    @Test(groups = "BrowsePlaces")
     public void goToCavesPage() {
 
-        HomePage home = new HomePage(launchDriver())
+        HomePage hm = new HomePage(driver)
                 .browseCavesPage();
 
-        Assert.assertEquals(launchDriver().getCurrentUrl(), "https://www.komoot.com/places/5/caves");
+        Assert.assertEquals(driver.getCurrentUrl(), Constants.BROWSE_CAVES_PAGE);
     }
 
-    @Test
+    @Test(groups = "BrowsePlaces")
     public void goToWaterfallsPage() {
 
-        HomePage home = new HomePage(launchDriver())
+        HomePage hm = new HomePage(driver)
                 .browseWaterfallsPage();
 
-        Assert.assertEquals(launchDriver().getCurrentUrl(), "https://www.komoot.com/places/4/waterfalls");
+        Assert.assertEquals(driver.getCurrentUrl(), Constants.BROWSE_WATERFALLS_PAGE);
     }
 }

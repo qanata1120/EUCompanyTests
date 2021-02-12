@@ -18,6 +18,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@title='Caves']")
     private WebElement browseCavesTab;
 
+    @FindBy(xpath = "//*[@id='pageMountNode']/div/div[1]/div/div/div[1]/ul/li[1]")
+    private WebElement discoverPageTab;
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -46,4 +49,10 @@ public class HomePage extends BasePage {
         browseWaterfallsTab.click();
         return createPage();
     }
+
+    public HomePage navigateToDiscoverPage() {
+        discoverPageTab.click();
+        return createPage();
+    }
 }
+
