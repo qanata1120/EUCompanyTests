@@ -10,7 +10,6 @@ public interface IRequestBuilder {
         return
                 given()
                         .param(byParam, paramValue)
-
                         .when()
                         .get(endpoint)
                         .then()
