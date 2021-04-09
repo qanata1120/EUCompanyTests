@@ -1,4 +1,4 @@
-# KomootTestsFor7Senders
+# EU Company Tests
 
 Description
 This project implements few automation tests of https://www.komoot.com for Seven Senders.
